@@ -1,0 +1,21 @@
+db-config:
+  url: jdbc:postgresql://localhost:5432/student-management-system
+  user: postgres
+  pass: admin
+
+spring:
+  datasource:
+    url: ${db-config.url}
+    username: ${db-config.user}
+    password: ${db-config.pass}
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    schemas: usr
+    locations: filesystem:src/main/resources/db/migration
+    url: ${db-config.url}
+    user: ${db-config.user}
+    password: ${db-config.pass}
+
+springdoc:
+  swagger-ui:
+    operations-sorter: method

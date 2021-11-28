@@ -1,0 +1,17 @@
+[x] - all controllers
+[x] - all services
+[x] - exception handling
+[x] - filtering
+[x] - logging
+[] - security
+[x] - swagger
+[] - ci/cd
+[] - gitlab
+[] - keycloak
+[] - redis
+[] - rabbitmq
+[] - terraform
+[] - prometheus
+[] - docker
+[] - kubernetes
+[] - gcp
