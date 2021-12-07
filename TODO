@@ -6,10 +6,8 @@
 [] - security
 [x] - swagger
 [] - ci/cd
-[] - gitlab
+[x] - gitlab
 [] - keycloak
-[] - redis
-[] - rabbitmq
 [] - terraform
 [] - prometheus
 [] - docker

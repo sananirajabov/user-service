@@ -1,21 +1,29 @@
-db-config:
-  url: jdbc:postgresql://localhost:5432/student-management-system
+database:
+  url: jdbc:postgresql://localhost:5434/user-service-db
   user: postgres
   pass: admin
+  schema: users
 
 spring:
+  application:
+    name: user-service
   datasource:
-    url: ${db-config.url}
-    username: ${db-config.user}
-    password: ${db-config.pass}
+    url: ${database.url}
+    username: ${database.user}
+    password: ${database.pass}
     driver-class-name: org.postgresql.Driver
   flyway:
-    schemas: usr
+    schemas: ${database.schema}
     locations: filesystem:src/main/resources/db/migration
-    url: ${db-config.url}
-    user: ${db-config.user}
-    password: ${db-config.pass}
+    url: ${database.url}
+    user: ${database.user}
+    password: ${database.pass}
+  jpa:
+    show-sql: true
 
 springdoc:
   swagger-ui:
     operations-sorter: method
+
+server:
+  port: 8083
